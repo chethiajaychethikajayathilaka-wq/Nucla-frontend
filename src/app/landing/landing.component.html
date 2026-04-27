@@ -1,0 +1,312 @@
+<div class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1420]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center px-4 md:px-8 h-20 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-2 md:gap-4">
+<img alt="NucLa Logo" class="h-10 w-auto" data-alt="NucLa Logo" src="/favicon.ico"/>
+<span class="text-xl md:text-2xl font-bold tracking-tighter text-[#a8e8ff] font-['Space_Grotesk']">NucLa</span>
+</div>
+
+<div class="flex items-center gap-2 md:gap-4">
+<button (click)="openAuth('login')" class="px-3 md:px-6 py-2 text-slate-400 hover:text-slate-100 transition-all font-['Space_Grotesk'] text-sm md:text-base font-medium cursor-pointer">Login</button>
+<button (click)="openAuth('signup')" class="cursor-pointer px-4 md:px-6 py-2 md:py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-['Space_Grotesk'] text-sm md:text-base font-bold tracking-tight hover:scale-[1.02] duration-300 ease-in-out glow-primary">Register</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-surface via-surface/90 to-surface"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute inset-0 particle-bg opacity-30"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10 flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 text-left">
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
+<span class="text-primary block">THE FUTURE OF ATOMIC EDUCATION</span>
+<span class="text-white block">Decoding the Nucleus for the Next Generation</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                    Step into the digital laboratory where subatomic physics comes to life. Experience the world's most immersive platform for nuclear science mastery.
+                </p>
+<div class="flex flex-wrap gap-6">
+<button (click)="openAuth('signup')" class="cursor-pointer px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-headline font-bold text-lg hover:scale-105 transition-transform glow-primary">Join Community</button>
+<button (click)="openAuth('login')" class="px-8 py-4 glass-panel border border-outline-variant/20 rounded-xl font-headline font-bold text-lg hover:bg-surface-container-high transition-colors cursor-pointer">View Isotopes</button>
+</div>
+</div>
+<div class="flex-1 w-full max-w-2xl aspect-square relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full animate-pulse"></div>
+<div class="w-full h-full glass-panel rounded-[2.5rem] border border-outline-variant/10 shadow-2xl flex items-center justify-center overflow-hidden" data-alt="high-tech 3d digital representation of a stylized glowing atom with rotating electron shells and a bright central core on dark background">
+<img alt="Atomic Visualization" class="w-4/5 h-4/5 object-contain" data-alt="dynamic 3d visualization of an atomic nucleus with glowing protons and neutrons and orbiting energy paths in cyan and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC55BuvG7AQmrKF-9m9KFhQNgDKoxM2NiHgN_f0R1It2C_xr__SFKhvV0cDODHzeRDSbkMhviL28cqN-ydRH5UGgUP-t47eoRZGGSjb3vze31XL7-F82bxcuevOZc0uHh5cd-vR6YLP5eI74_nESgVsZRkqdWV32f31Kf2dKw_Zc7ntnoFeTESatgP4puXaR3e0hJLo_hcWBPfhYS3Sfzfk9O0rDafhl_HaA8twCmj8XQvjUjAJ1oPim72Uj-pEfIy1_OlC5ctAf7-"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Statement -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant/10">
+<div class="container mx-auto px-8 max-w-4xl text-center">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-label text-sm font-bold tracking-wider mb-8">THE VISION</span>
+<h2 class="font-headline text-3xl md:text-4xl font-bold text-on-surface leading-snug">
+                "We are building the future <span class="text-primary">Duolingo</span>, <span class="text-primary">Stack Overflow</span> and <span class="text-primary">LeetCode</span> for Nuclear Physics. A place to learn, practice, and share knowledge."
+            </h2>
+</div>
+</section>
+<!-- Scientific Modules Grid -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline text-4xl font-bold mb-4">Scientific Modules</h2>
+<p class="text-on-surface-variant text-lg">Harness the power of our interactive tools designed for deep conceptual understanding of nuclear phenomena.</p>
+</div>
+<button (click)="openAuth('login')" class="flex items-center gap-2 text-tertiary font-headline font-bold hover:gap-4 transition-all cursor-pointer">
+                    Explore all modules <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Module 1: Nuclear Reactor Simulator -->
+<div class="group p-10 rounded-[2rem] bg-surface-container-low border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 flex flex-col gap-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full group-hover:bg-primary/10 transition-colors"></div>
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-white">Nuclear Reactor Simulator</h3>
+<p class="text-on-surface-variant leading-relaxed">Take control of a virtual nuclear reactor. Manage control rods, monitor coolant temperatures, and learn how we harness atomic energy safely.</p>
+</div>
+<div class="mt-auto">
+<button (click)="openAuth('login')" class="cursor-pointer px-6 py-3 rounded-xl bg-surface-container-highest font-label text-sm font-bold tracking-wider group-hover:bg-primary group-hover:text-on-primary transition-all">START SIMULATION</button>
+</div>
+</div>
+<!-- Module 2: Radiation Runner -->
+<div class="group p-10 rounded-[2rem] bg-surface-container-low border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 flex flex-col gap-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full group-hover:bg-primary/10 transition-colors"></div>
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">directions_run</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-white">Radiation Runner</h3>
+<p class="text-on-surface-variant leading-relaxed">Jump over radioactive objects and explore how radiation can affect the monkey. An interactive game showing how much radiation we're exposed to in our day-to-day life.</p>
+</div>
+<div class="mt-auto">
+<button (click)="openAuth('login')" class="cursor-pointer px-6 py-3 rounded-xl bg-surface-container-highest font-label text-sm font-bold tracking-wider group-hover:bg-primary group-hover:text-on-primary transition-all">PLAY GAME</button>
+</div>
+</div>
+<!-- Module 3: Article Hub -->
+<div class="group p-10 rounded-[2rem] bg-surface-container-low border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 flex flex-col gap-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full group-hover:bg-primary/10 transition-colors"></div>
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">article</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-white">Article Hub</h3>
+<p class="text-on-surface-variant leading-relaxed">Read articles about nuclear physics and radiation written by college students. Expand your theoretical knowledge through peer-reviewed student insights.</p>
+</div>
+<div class="mt-auto">
+<button (click)="openAuth('login')" class="cursor-pointer px-6 py-3 rounded-xl bg-surface-container-highest font-label text-sm font-bold tracking-wider group-hover:bg-primary group-hover:text-on-primary transition-all">READ ARTICLES</button>
+</div>
+</div>
+<!-- Module 4: Quiz & Global Leaderboard -->
+<div (click)="openAuth('login')" class="group p-10 rounded-[2rem] bg-surface-container-low border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 flex flex-col gap-6 relative overflow-hidden" style="cursor: pointer;">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full group-hover:bg-primary/10 transition-colors"></div>
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-white">Quiz &amp; Global Leaderboard</h3>
+<p class="text-on-surface-variant leading-relaxed">Compete, answer the questions, and climb the leaderboard. Test your mastery of atomic principles against learners from around the globe.</p>
+</div>
+<div class="mt-auto">
+<button (click)="openAuth('login')" class="cursor-pointer px-6 py-3 rounded-xl bg-surface-container-highest font-label text-sm font-bold tracking-wider group-hover:bg-primary group-hover:text-on-primary transition-all">ENTER COMPETITION</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0b1420] w-full py-12 border-t border-[#3c494e]/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 max-w-screen-2xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-3">
+<span class="text-[#a8e8ff] font-['Space_Grotesk'] font-bold text-xl">NucLa</span>
+</div>
+<p class="font-['Manrope'] text-sm text-slate-500">2026</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 hover:text-[#74f1f7] transition-all duration-200 font-['Manrope'] text-sm cursor-pointer" (click)="openAuth('privacy')">Privacy Policy</a>
+<a class="text-slate-500 hover:text-[#74f1f7] transition-all duration-200 font-['Manrope'] text-sm cursor-pointer" (click)="openAuth('credits')">Credits</a>
+<a class="text-slate-500 hover:text-white transition-all duration-200 font-['Manrope'] text-sm" href="mailto:nuclaflux@gmail.com">Contact: nuclaflux@gmail.com</a>
+</div>
+<div class="flex gap-4 min-w-[88px]"></div>
+</div>
+</footer>
+</div>
+
+<!-- Auth Modals -->
+@if (authView() !== 'none') {
+  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-dark-blue/40 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-md overflow-hidden border border-silver relative">
+      <!-- Close Button -->
+      <button (click)="closeAuth()" class="absolute top-4 right-4 text-ash hover:text-dark-blue transition-colors">
+        <mat-icon>close</mat-icon>
+      </button>
+
+      <div class="p-8">
+        <div class="flex items-center gap-2 mb-8 justify-center">
+          <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold font-display text-xl">
+            N
+          </div>
+          <span class="font-display font-bold text-2xl tracking-tight text-dark-blue">NucLA</span>
+        </div>
+
+        <!-- Global Messages -->
+        @if (errorMessage()) {
+          <div class="mb-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl text-sm">
+            {{ errorMessage() }}
+          </div>
+        }
+        @if (successMessage()) {
+          <div class="mb-6 p-4 bg-blue-600/20 border border-blue-600 text-dark-blue rounded-xl text-sm font-medium">
+            {{ successMessage() }}
+          </div>
+        }
+
+        <!-- Login Form -->
+        @if (authView() === 'login') {
+          <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="space-y-4">
+            <h2 class="text-2xl font-bold text-dark-blue mb-6 text-center font-display">Welcome Back</h2>
+            
+            <div>
+              <label for="login-username" class="block text-sm font-medium text-slate-700 mb-1">Username</label>
+              <input id="login-username" type="text" formControlName="username" class="w-full px-4 py-3 rounded-xl border border-silver focus:border-dark-blue focus:ring-2 focus:ring-dark-blue/20 outline-none transition-all bg-white text-dark-blue" placeholder="Enter your username">
+            </div>
+            
+            <div>
+              <label for="login-password" class="block text-sm font-medium text-slate-700 mb-1">Password</label>
+              <input id="login-password" type="password" formControlName="password" class="w-full px-4 py-3 rounded-xl border border-silver focus:border-dark-blue focus:ring-2 focus:ring-dark-blue/20 outline-none transition-all bg-white text-dark-blue" placeholder="••••••••">
+            </div>
+
+            <div class="flex justify-end">
+              <button type="button" (click)="openAuth('forgot')" class="text-sm text-dark-blue hover:underline font-medium">Forgot Password?</button>
+            </div>
+
+            <button type="submit" [disabled]="isLoading()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-md disabled:opacity-50 mt-4">
+              {{ isLoading() ? 'Logging in...' : 'Log In' }}
+            </button>
+            
+            <p class="text-center text-sm text-slate-600 mt-6">
+              Don't have an account? <button type="button" (click)="openAuth('signup')" class="text-dark-blue font-bold hover:underline">Sign up</button>
+            </p>
+          </form>
+        }
+
+        <!-- Forgot Password Form -->
+        @if (authView() === 'forgot') {
+          <form [formGroup]="forgotForm" (ngSubmit)="onForgot()" class="space-y-4">
+            <h2 class="text-2xl font-bold text-dark-blue mb-2 text-center font-display">Reset Password</h2>
+            <p class="text-slate-600 text-sm text-center mb-6">Enter your details to receive a temporary password.</p>
+            
+            <div>
+              <label for="forgot-username" class="block text-sm font-medium text-slate-700 mb-1">Username</label>
+              <input id="forgot-username" type="text" formControlName="username" class="w-full px-4 py-3 rounded-xl border border-silver focus:border-dark-blue focus:ring-2 focus:ring-dark-blue/20 outline-none transition-all bg-white text-dark-blue" placeholder="Enter your username">
+            </div>
+            
+            <div>
+              <label for="forgot-email" class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+              <input id="forgot-email" type="email" formControlName="email" class="w-full px-4 py-3 rounded-xl border border-silver focus:border-dark-blue focus:ring-2 focus:ring-dark-blue/20 outline-none transition-all bg-white text-dark-blue" placeholder="Enter your email address">
+            </div>
+
+            <button type="submit" [disabled]="isLoading()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-md disabled:opacity-50 mt-4">
+              {{ isLoading() ? 'Sending...' : 'Reset Password' }}
+            </button>
+            
+            <p class="text-center text-sm text-slate-600 mt-6">
+              Remembered your password? <button type="button" (click)="openAuth('login')" class="text-dark-blue font-bold hover:underline">Log in</button>
+            </p>
+          </form>
+        }
+
+        <!-- Signup Form -->
+        @if (authView() === 'signup') {
+          <form [formGroup]="signupForm" (ngSubmit)="onSignup()" class="space-y-4">
+            <h2 class="text-2xl font-bold text-dark-blue mb-6 text-center font-display">Create Account</h2>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="signup-firstname" class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
+                <input id="signup-firstname" type="text" formControlName="firstName" class="w-full px-4 py-3 rounded-xl border border-silver focus:border-dark-blue focus:ring-2 focus:ring-dark-blue/20 outline-none transition-all bg-white text-dark-blue" placeholder="Enter your first name">
+                @if (validationErrors()['firstName'] || (signupForm.get('firstName')?.touched && signupForm.get('firstName')?.invalid)) {
+                  <p class="text-red-500 text-xs mt-1">{{ validationErrors()['firstName'] || 'First name is required' }}</p>
+                }
+              </div>
+              <div>
+                <label for="signup-lastname" class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
+                <input id="signup-lastname" type="text" formControlName="lastName" class="w-full px-4 py-3 rounded-xl border border-silver focus:border-dark-blue focus:ring-2 focus:ring-dark-blue/20 outline-none transition-all bg-white text-dark-blue" placeholder="Enter your last name">
+                @if (validationErrors()['lastName'] || (signupForm.get('lastName')?.touched && signupForm.get('lastName')?.invalid)) {
+                  <p class="text-red-500 text-xs mt-1">{{ validationErrors()['lastName'] || 'Last name is required' }}</p>
+                }
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4">
+              <div class="col-span-2">
+                <label for="signup-username" class="block text-sm font-medium text-slate-700 mb-1">Username</label>
+                <input id="signup-username" type="text" formControlName="username" class="w-full px-4 py-3 rounded-xl border border-silver focus:border-dark-blue focus:ring-2 focus:ring-dark-blue/20 outline-none transition-all bg-white text-dark-blue" placeholder="Choose a username">
+                @if (validationErrors()['username'] || (signupForm.get('username')?.touched && signupForm.get('username')?.invalid)) {
+                  <p class="text-red-500 text-xs mt-1">{{ validationErrors()['username'] || 'Username must be between 3 and 50 characters' }}</p>
+                }
+              </div>
+              <div>
+                <label for="signup-age" class="block text-sm font-medium text-slate-700 mb-1">Age</label>
+                <input id="signup-age" type="number" formControlName="age" class="w-full px-4 py-3 rounded-xl border border-silver focus:border-dark-blue focus:ring-2 focus:ring-dark-blue/20 outline-none transition-all bg-white text-dark-blue" placeholder="Enter your age">
+                @if (validationErrors()['age'] || (signupForm.get('age')?.touched && signupForm.get('age')?.invalid)) {
+                  <p class="text-red-500 text-xs mt-1">{{ validationErrors()['age'] || 'Age must be at least 1' }}</p>
+                }
+              </div>
+            </div>
+            
+            <div>
+              <label for="signup-email" class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+              <input id="signup-email" type="email" formControlName="email" class="w-full px-4 py-3 rounded-xl border border-silver focus:border-dark-blue focus:ring-2 focus:ring-dark-blue/20 outline-none transition-all bg-white text-dark-blue" placeholder="Enter your email address">
+              @if (validationErrors()['email'] || (signupForm.get('email')?.touched && signupForm.get('email')?.invalid)) {
+                <p class="text-red-500 text-xs mt-1">{{ validationErrors()['email'] || 'Email format is invalid' }}</p>
+              }
+            </div>
+
+            <button type="submit" [disabled]="isLoading()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-md disabled:opacity-50 mt-4">
+              {{ isLoading() ? 'Creating Account...' : 'Sign Up' }}
+            </button>
+            
+            <p class="text-center text-sm text-slate-600 mt-6">
+              Already have an account? <button type="button" (click)="openAuth('login')" class="text-dark-blue font-bold hover:underline">Log in</button>
+            </p>
+          </form>
+        }
+
+        <!-- Credits -->
+        @if (authView() === 'credits') {
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold text-dark-blue mb-6 text-center font-display">Credits</h2>
+            <div class="text-slate-700 text-sm leading-relaxed space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+              <p>We sincerely thank the International Atomic Energy Agency (IAEA), the Asia Network for Education in Nuclear Technology (ANENT), and the International Nuclear Science &amp; Technology Academy (INSTA) for organizing the &quot;Myth Smashers: Nuclear Science App Challenge 2026&quot; and providing us with this valuable opportunity.</p>
+              <p>We are grateful to the Sri Lanka Atomic Energy Board for selecting and guiding us to represent Sri Lanka.</p>
+              <p>We also thank Kingswood and Mahamaya Colleges for their continuous support.</p>
+              <p>Special thanks to our mentors, Ms. Erandi Ranasinghe and Ms. Prasadinie Randeni, for their guidance.</p>
+              <p>Finally, we appreciate all our sponsors and supporters for making this journey possible.</p>
+            </div>
+          </div>
+        }
+
+        <!-- Privacy Policy -->
+        @if (authView() === 'privacy') {
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold text-dark-blue mb-6 text-center font-display">Privacy Policy</h2>
+            <div class="text-slate-700 text-sm leading-relaxed space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+              <p>At NucLA, we prioritize your privacy and data security. We solely collect and store your email address for the express purpose of facilitating account recovery and issuing temporary passwords. No other personally identifiable information or sensitive data is collected, stored, or processed by our platform.</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+}
